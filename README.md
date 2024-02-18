@@ -27,7 +27,13 @@ GET `http://localhost:8080/expression/2_p_2_m_1`
 ```
 
 
-Get `http://localhost:8080/api/getimpodencekey`
+POST `http://localhost:8080/api/getimpodencekey`
+```json
+{
+    "expression": "2+2"
+}
+```
+
 ```
 "2_p_2"
 ```
