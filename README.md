@@ -18,18 +18,18 @@ POST `http://localhost:8080/expression`
 
 GET `http://localhost:8080/expression/2_p_2_m_1`
 ```json
-"id": 2_p_2_m_1,
-"expression": 2+2-1,
-"answer": 3,
-"status": completed,
-"createdAt": 2024-02-18 20:23:54.361591737 +0000 UTC,
-"completedAt": 2024-02-18 20:23:59.376610678 +0000 UTC
+"id": "2_p_2_m_1",
+"expression": "2+2-1",
+"answer": "3",
+"status": "completed",
+"createdAt": "2024-02-18 20:23:54.361591737 +0000 UTC",
+"completedAt": "2024-02-18 20:23:59.376610678 +0000 UTC"
 ```
 
 
 Get `http://localhost:8080/api/getimpodencekey`
 ```
-2_p_2
+"2_p_2"
 ```
 ## Вы можете получить данную ошибку: 
 
