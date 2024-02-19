@@ -4,6 +4,7 @@ import (
 	"calculator/internal/model"
 	"calculator/pkg/config"
 	shuntingYard "calculator/pkg/shuntingYard"
+	"log"
 	"sync"
 	"time"
 )
@@ -46,6 +47,7 @@ func (a *Agent) distributeTasks() {
 		for {
 			// Use a select statement with a default case to avoid blocking
 			if a.Calculators[i].AddTask(task) {
+				log.Printf("task send to Calculator[%b]", a.Calculators[i].id)
 				break
 			}
 

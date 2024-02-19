@@ -8,7 +8,6 @@ WORKDIR /
 COPY ./cmd/orchestrator ./cmd/orchestrator/
 COPY ./pkg ./pkg/
 COPY ./internal/orchestrator ./internal/orchestrator/
-COPY ./internal/logger ./internal/logger/
 COPY ./internal/model ./internal/model/
 COPY ./.env ./
 

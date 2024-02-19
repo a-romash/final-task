@@ -50,7 +50,11 @@ func (c *Calculator) Start() {
 			c.expression = task
 			c.isBusy = true
 
+			log.Printf("Calculator[%v]: got task to solve", c.id)
+
 			c.SolveExpression(task)
+
+			log.Printf("Calculator[%v]: task solved", c.id)
 
 			c.expression = nil
 			c.isBusy = false
@@ -64,6 +68,7 @@ func (c *Calculator) SolveExpression(expr *model.ExpressionPart) {
 	if result, err := shuntingYard.Evaluate([]*shuntingYard.RPNToken{expr.FirstOperand, expr.SecondOperand, expr.Operation}); err == nil {
 		tokenizedResult := shuntingYard.NewRPNOperandToken(result)
 		expr.Result <- tokenizedResult
+		return
 	}
 	expr.Result <- shuntingYard.NewRPNOperandToken(0)
 }

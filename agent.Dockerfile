@@ -8,7 +8,6 @@ WORKDIR /
 COPY ./cmd/agent ./cmd/agent/
 COPY ./pkg ./pkg/
 COPY ./internal/agent ./internal/agent/
-COPY ./internal/logger ./internal/logger/
 COPY ./internal/model ./internal/model/
 COPY ./.env ./
 
