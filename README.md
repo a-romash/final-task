@@ -59,7 +59,7 @@ POST `http://localhost:8080/expression`
 }
 ```
 
-GET `http://localhost:8080/expression/2_p_2_m_1`
+GET `http://localhost:8080/expression?id=2_p_2_m_1`
 ```json
 "id": "2_p_2_m_1",
 "expression": "2+2-1",
