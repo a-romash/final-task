@@ -47,9 +47,9 @@ Back-end часть
 </details>
 
 ## Запуск проекта: 
-0) Установите [docker engine](https://docs.docker.com/engine/install/) и [docker compose](https://docs.docker.com/compose/install/)
+0) Установите [docker engine](https://docs.docker.com/engine/install/) и [docker compose](https://docs.docker.com/compose/install/) (обязательно версию 2.24.5 и новее, иначе на Windows не будет билдить)
 1) `cd <"path/to/project/root/directory">`
-2) `docker compose up -d` (`docker compose up -d --scale agent=X` <- если хотите несколько агентов на вычисление)
+2) `docker compose up -d` (`docker compose up -d --scale agent=X` <- если хотите несколько (X - количество) агентов на вычисление; без флага `-d` если хотите, чтобы выводились логи докера в консоль)
 
 # Пример:
 POST `http://localhost:8080/expression`
