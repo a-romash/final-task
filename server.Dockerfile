@@ -16,7 +16,7 @@ COPY go.* ./
 RUN go mod download
 
 # Build
-RUN go build -o server.exe ./cmd/orchestrator/main.go
+RUN GOOS=linux go build -o server ./cmd/orchestrator/main.go
 
 FROM alpine:3.18
 
@@ -26,4 +26,4 @@ COPY --from=builder . .
 
 EXPOSE 8080
 
-CMD ["/server.exe"]
+CMD ["./server"]

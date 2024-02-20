@@ -36,7 +36,7 @@ services:
     build: 
       context: .
       dockerfile: ./server.Dockerfile
-    command: ./server.exe
+    command: ./server
     ports:
       - 8080:8080
     restart: unless-stopped
@@ -47,7 +47,7 @@ services:
     build: 
       context: .
       dockerfile: ./agent.Dockerfile
-    command: ./agent.exe
+    command: ./agent
     restart: unless-stopped
     depends_on:
       - server

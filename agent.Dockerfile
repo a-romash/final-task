@@ -16,7 +16,7 @@ COPY go.* ./
 RUN go mod download
 
 # Build
-RUN go build -o agent.exe ./cmd/agent/main.go
+RUN GOOS=linux go build -o agent ./cmd/agent/main.go
 
 FROM alpine:3.18
 
@@ -24,4 +24,4 @@ WORKDIR /
 
 COPY --from=builder . .
 
-CMD ["/agent.exe"]
+CMD ["./agent"]
